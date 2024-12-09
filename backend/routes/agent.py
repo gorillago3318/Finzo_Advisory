@@ -2,9 +2,9 @@
 
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from decorators import agent_required
-from extensions import db
-from models import Lead
+from backend.decorators import agent_required
+from backend.extensions import db
+from backend.models import Lead
 import logging
 
 agent_bp = Blueprint('agent', __name__, url_prefix='/api/agent')
